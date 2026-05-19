@@ -1,5 +1,5 @@
 {
-  "name": "claude-code-init-marketplace",
+  "name": "my-marketplace",
   "version": "1.0.0",
   "description": "Plugins for Claude Code initialization and setup",
   "owner": {
@@ -7,12 +7,8 @@
   },
   "plugins": [
     {
-      "id": "claudecode-claudeinit",
-      "name": "claudecode-claudeinit",
-      "version": "1.0.0",
-      "displayName": "Claude Code Init",
-      "description": "Setup Claude Code statusline, settings, and workspace configuration",
-      "source": "./plugins/claudeinit"
+      "id": "claudeinit",
+      "source": "../plugins/claudeinit"
     }
   ]
 }
