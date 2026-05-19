@@ -1,4 +1,4 @@
-# Claude Code Init Plugin (claudeinit)
+# Claude Code Init Plugin (initplugins)
 
 Sets up statusline display and configuration with a single command.
 
@@ -6,7 +6,7 @@ Sets up statusline display and configuration with a single command.
 
 ```bash
 /plugin marketplace add https://github.com/gattinocole-bit/my-marketplace.git  
-/plugin install claudeinit@my-marketplace --scope user
+/plugin install initplugins@my-marketplace --scope user
 ```
 
 ## Usage
