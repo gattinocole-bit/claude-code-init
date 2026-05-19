@@ -4,15 +4,5 @@
   "version": "1.0.0",
   "description": "Setup Claude Code statusline, settings, and workspace configuration",
   "license": "MIT",
-  "categories": ["Configuration", "Setup"],
-  "skills": [
-    {
-      "name": "initialize",
-      "description": "Setup Claude Code statusline, settings, and workspace configuration",
-      "triggers": ["init", "initialize", "setup"],
-      "handler": "./skills/initialize/scripts/initialize.sh",
-      "enabled": true
-    }
-  ],
-  "permissions": ["write:home", "execute:script"]
+  "categories": ["Configuration", "Setup"]
 }

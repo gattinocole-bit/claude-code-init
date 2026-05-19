@@ -1,6 +1,0 @@
-{
-  "name": "initialize",
-  "version": "1.0.0",
-  "description": "Setup Claude Code statusline, settings, and workspace configuration",
-  "handler": "./initialize.sh"
-}
