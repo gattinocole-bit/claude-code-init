@@ -1,0 +1,47 @@
+{
+  "name": "initialize",
+  "version": "1.0.0",
+  "description": "Setup Claude Code statusline, settings, and workspace configuration",
+  "author": "Claude Code Marketplace",
+  "license": "MIT",
+  "triggers": [
+    "/initialize",
+    "/init",
+    "/setup"
+  ],
+  "handler": {
+    "type": "bash",
+    "script": "./initialize.sh"
+  },
+  "tags": [
+    "setup",
+    "config",
+    "statusline",
+    "initialization",
+    "workspace"
+  ],
+  "requirements": {
+    "platform": ["darwin", "linux"],
+    "minVersion": "1.0.0"
+  },
+  "output": {
+    "creates": [
+      "~/.claude/statusline.sh",
+      "~/.claude/settings.json"
+    ],
+    "modifies": [
+      "~/.claude/settings.json"
+    ]
+  },
+  "permissions": [
+    "write:home",
+    "execute:script"
+  ],
+  "documentation": "./SKILL.md",
+  "examples": [
+    {
+      "command": "/initialize",
+      "description": "Run full Claude Code initialization"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "@claudecode/claudeinit",
+  "version": "1.0.0",
+  "description": "Claude Code initialization plugin - Setup statusline, settings, and workspace configuration",
+  "author": "candyuncrush <zennguyen.hcm@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gattinocole-bit/claude-code-init-plugin"
+  },
+  "homepage": "https://github.com/gattinocole-bit/claude-code-init-plugin",
+  "bugs": {
+    "url": "https://github.com/gattinocole-bit/claude-code-init-plugin/issues"
+  },
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "setup",
+    "initialization",
+    "statusline",
+    "configuration"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=16.0.0",
+    "claude-code": ">=1.0.0"
+  },
+  "files": [
+    "dist/",
+    "skills/",
+    "README.md",
+    "LICENSE",
+    "plugin.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "echo 'Tests not yet implemented'",
+    "lint": "echo 'Linting not yet configured'",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  }
+}

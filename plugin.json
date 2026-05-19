@@ -1,0 +1,95 @@
+{
+  "name": "@claudecode/claudeinit",
+  "displayName": "Claude Code Init",
+  "version": "1.0.0",
+  "description": "Automated setup for Claude Code statusline, settings, and workspace configuration",
+  "author": {
+    "name": "gattinocole",
+    "email": "gattinocole@gmail.com",
+    "url": "https://github.com/gattinocole-bit"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/gattinocole-bit/claude-code-init-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gattinocole-bit/claude-code-init-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gattinocole-bit/claude-code-init-plugin/issues"
+  },
+  "categories": [
+    "Configuration",
+    "Setup",
+    "Utilities"
+  ],
+  "keywords": [
+    "claude-code",
+    "init",
+    "setup",
+    "statusline",
+    "configuration",
+    "workspace"
+  ],
+  "engines": {
+    "claude-code": ">=1.0.0",
+    "node": ">=16.0.0"
+  },
+  "skills": [
+    {
+      "name": "initialize",
+      "path": "./skills/initialize",
+      "triggers": ["/initialize", "/init", "/setup"],
+      "description": "Setup Claude Code statusline and configuration"
+    }
+  ],
+  "activationEvents": [
+    "onCommand:initialize",
+    "onCommand:init",
+    "onCommand:setup"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "initialize",
+        "title": "Initialize Claude Code Workspace",
+        "description": "Setup statusline, settings, and configuration"
+      },
+      {
+        "command": "init",
+        "title": "Initialize Claude Code Workspace",
+        "description": "Alias for initialize"
+      },
+      {
+        "command": "setup",
+        "title": "Initialize Claude Code Workspace",
+        "description": "Alias for initialize"
+      }
+    ]
+  },
+  "permissions": [
+    "write:home",
+    "execute:script",
+    "read:config"
+  ],
+  "settings": {
+    "claudeinit.autoRun": {
+      "type": "boolean",
+      "default": false,
+      "description": "Automatically run initialization on first launch"
+    },
+    "claudeinit.backupSettings": {
+      "type": "boolean",
+      "default": true,
+      "description": "Create backup of existing settings before modifying"
+    }
+  },
+  "scripts": {
+    "build": "npm run build",
+    "test": "bash skills/initialize/initialize.sh"
+  },
+  "publishing": {
+    "registry": "npm",
+    "publisherName": "gattinocole-bit",
+    "tags": ["official", "setup"]
+  }
+}
