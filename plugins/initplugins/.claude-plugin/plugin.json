@@ -8,8 +8,8 @@
   "skills": [
     {
       "name": "initialize",
-      "handler": "../initplugins/skills/initialize/scripts/initialize.sh",
-      "documentation": "../initplugins/skills/initialize/SKILL.md",
+      "handler": "../skills/initialize/scripts/initialize.sh",
+      "documentation": "../skills/initialize/SKILL.md",
       "triggers": ["/initialize", "/init", "/setup"],
       "description": "Setup Claude Code statusline and configuration"
     }
