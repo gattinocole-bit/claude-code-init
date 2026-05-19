@@ -10,7 +10,8 @@
       "name": "initialize",
       "description": "Setup Claude Code statusline, settings, and workspace configuration",
       "triggers": ["init", "initialize", "setup"],
-      "handler": "./skills/initialize/scripts/initialize.sh"
+      "handler": "./skills/initialize/scripts/initialize.sh",
+      "enabled": true
     }
   ],
   "permissions": ["write:home", "execute:script"]
