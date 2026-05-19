@@ -5,7 +5,8 @@ Sets up statusline display and configuration with a single command.
 ## Installation
 
 ```bash
-/plugin install claudeinit@claude-code-init-marketplace --scope user
+/plugin marketplace add https://github.com/gattinocole-bit/my-marketplace.git  
+/plugin install claudeinit@my-marketplace --scope user
 ```
 
 ## Usage

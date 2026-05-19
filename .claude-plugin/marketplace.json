@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "claudeinit",
-      "source": "../plugins/claudeinit"
+      "source": "./plugins/claudeinit"
     }
   ]
 }
