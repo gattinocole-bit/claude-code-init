@@ -8,7 +8,7 @@
   "plugins": [
     {
       "id": "claudecode-claudeinit",
-      "name": "@claudecode/claudeinit",
+      "name": "claudecode-claudeinit",
       "version": "1.0.0",
       "displayName": "Claude Code Init",
       "description": "Setup Claude Code statusline, settings, and workspace configuration",
