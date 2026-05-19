@@ -7,11 +7,7 @@
   "categories": ["Configuration", "Setup"],
   "skills": [
     {
-      "name": "initialize",
-      "handler": "../skills/initialize/scripts/initialize.sh",
-      "documentation": "../skills/initialize/SKILL.md",
-      "triggers": ["/initialize", "/init", "/setup"],
-      "description": "Setup Claude Code statusline and configuration"
+      "path": "../skills/initialize"
     }
   ],
   "permissions": ["write:home", "execute:script"]
