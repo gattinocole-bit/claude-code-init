@@ -6,6 +6,24 @@ keywords: [setup, statusline, init, config, workspace, mcp, atlassian, datadog, 
 
 # Initialize Claude Code Workspace
 
+## IMPORTANT: Agent instructions
+
+**Before running the script**, ask the user for these three values:
+
+1. **Jira Project Key** — e.g. "LRP" or "MYPROJ"
+2. **Confluence Space ID** — numeric ID, e.g. "3415212996"
+3. **Atlassian Cloud URL** — e.g. "https://yourcompany.atlassian.net"
+
+Then run the script with those values set as environment variables:
+
+```bash
+JIRA_KEY="<value>" CONFLUENCE_SPACE_ID="<value>" ATLASSIAN_CLOUD_ID="<value>" bash skills/initialize/scripts/initialize.sh
+```
+
+If the user skips a value, omit that env var — the script will use placeholder defaults.
+
+---
+
 This skill configures Claude Code with a custom statusline that displays:
 - **Workspace**: Current working directory name
 - **Git Branch**: Active git branch (if in a git repo)
@@ -21,15 +39,9 @@ This skill configures Claude Code with a custom statusline that displays:
 2. Updates `~/.claude/settings.json` (global config):
    - Enable the statusline with workspace/branch info
    - Enable fast mode for quicker responses
-   - Keep `CLAUDE.md` under 200 lines (truncate if needed)
-   - Enable auto-memory for `MEMORY.md` (persistent across conversations)
    - Configure MCP servers (Atlassian, Datadog, Playwright)
-3. Prompts for Atlassian configuration:
-   - Jira project key
-   - Confluence spaceId
-   - CloudId URL
-4. Creates/updates `~/.claude/AGENTS.md` with Atlassian Rovo MCP settings
-5. Verifies configuration
+3. Creates/updates `~/.claude/AGENTS.md` with Atlassian Rovo MCP settings
+4. Verifies configuration
 
 ## Usage
 
@@ -77,7 +89,7 @@ echo "Claude Code Status"
     "playwright": {
       "type": "stdio",
       "command": "npx",
-      "args": ["@modelcontextprotocol/server-playwright"]
+      "args": ["@playwright/mcp@latest"]
     }
   }
 }
